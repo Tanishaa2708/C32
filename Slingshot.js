@@ -26,9 +26,19 @@ class SlingShot{
             var pointA = this.Slingshot.bodyA.position;
             var pointB = this.pointB;
             strokeWeight(4);
-            line(pointA.x, pointA.y, pointB.x, pointB.y);
+            if(pointA.x<200){
+            line(pointA.x-20, pointA.y, 180, pointB.y);
+            line(pointA.x-20, pointA.y, 220, pointB.y);
 
-           
+             image(this.sling3,pointA.x-25,pointA.y-15,20,40)
+            }
+            else if(pointA.x>200){
+                line(pointA.x+20, pointA.y, 180, pointB.y);
+            line(pointA.x+20, pointA.y, 220, pointB.y);
+
+             image(this.sling3,pointA.x+25,pointA.y-15,20,40)
+
+            }
             
           
         }
